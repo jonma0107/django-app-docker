@@ -10,6 +10,8 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
       - DATABASE_HOST=127.0.0.1
+    volumes:
+      - .:/var/lib/postgresql/data  
 
   web:
     build: .
