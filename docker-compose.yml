@@ -2,10 +2,14 @@ version: "3.9"
 services:
   db:
     image: postgres
+    restart: always
+    ports:
+      - "5432:5432"
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
+      - DATABASE_HOST=127.0.0.1
 
   web:
     build: .
@@ -15,7 +19,20 @@ services:
     volumes:
       - ./app:/app
     depends_on:
-      - db  
+      - db
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "contacto@jonathanmeza.com.co"
+      PGADMIN_DEFAULT_PASSWORD: "admin"
+    ports:
+      - "80:80"
+    depends_on:
+      - db
+
+
+
         
 
 
