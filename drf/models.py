@@ -22,10 +22,9 @@ class Drf(models.Model):
   description = models.TextField(blank=True)                       
   state = models.IntegerField(null=False, blank=False, choices=status)
   priority = models.IntegerField(null=False, blank=False, choices=issue)
-  deliver_date = models.DateTimeField(auto_now_add=False)
+  deliver_date = models.DateField(auto_now_add=False)
   comment = models.TextField(blank=True)
-  user = models.ForeignKey(User, on_delete=models.CASCADE)
-
+  # user = models.ForeignKey(User, on_delete=models.CASCADE)
 
   def __str__(self):
     return self.title  + ' by ' + self.user.username
