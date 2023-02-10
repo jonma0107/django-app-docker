@@ -12,7 +12,7 @@ status = [
 issue = [
   (1, 'HIGH'),
   (2, 'MEDIUM'),
-  (1, 'LOW')
+  (3, 'LOW')
 ]
 
 
