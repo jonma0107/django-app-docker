@@ -7,4 +7,8 @@
 + Filters
 ![image](https://user-images.githubusercontent.com/53632260/218204373-68604fd8-db01-4468-b1fd-13a758469443.png)
 
++ Fields of priority and state
+![image](https://user-images.githubusercontent.com/53632260/218560476-c5ab2091-2016-4ec7-9af6-cfca2b7fa737.png)
+
+
 
