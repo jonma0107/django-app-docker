@@ -11,7 +11,7 @@ services:
       - POSTGRES_PASSWORD=postgres
       - DATABASE_HOST=127.0.0.1
     volumes:
-      - ./app:/var/lib/postgresql/data  
+      - .:/var/lib/postgresql/data  
 
   web:
     build: .
@@ -19,7 +19,7 @@ services:
     ports:
       - "5000:8000"
     volumes:
-      - ./app:/app
+      - .:/app
     depends_on:
       - db
 
