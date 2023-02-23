@@ -5,7 +5,7 @@ from .api import DrfViewSet
 
 router = routers.DefaultRouter()
 
-router.register('api/drf', DrfViewSet, 'tasks' )
+router.register('api/list', DrfViewSet, 'tasks' )
 
 urlpatterns = router.urls
 
